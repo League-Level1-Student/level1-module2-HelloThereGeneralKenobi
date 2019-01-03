@@ -4,14 +4,7 @@ public class TeaParty {
 	private String name;
 	private boolean isWoman;
 	private boolean isKnighted;
-
-       public welcome(String name, boolean isWoman, boolean isKnighted)
-       {
-    	   		this.name = name;
-    	   		this.isWoman = isWoman;
-    	   		this.isKnighted = isKnighted;
-       }
-       
+	
        public String getName() {
     	   		return name;
        }
@@ -36,14 +29,24 @@ public class TeaParty {
     	   		this.isKnighted = isKnighted;
        }
        
-       void String welcome(String name, boolean isWoman, boolean isknighted) {
-    	   		if(isWoman == true) {
-    	   			if(isKnighted == true) {
-    	   				return "Hello lady " + name;
+       public String welcome(String name, boolean isWoman, boolean isKnighted) {
+    	   		if(isWoman) {
+    	   			if(isKnighted) {
+    	   				return "Hello Lady " + name;
+    	   			}
+    	   			else {
+    	   				return "Hello Ms. " + name;
     	   			}
     	   			
     	   		}
+    	   		else {
+    	   			if(isKnighted) {
+    	   				return "Hello Sir " + name;
+    	   			}
+    	   			else {
+    	   				return "Hello Mr. " + name;
+    	   			}
+    	   		}
        }
-       
-       
+        
 }
